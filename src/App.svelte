@@ -1,24 +1,13 @@
 <script>
 
-import { link, Router, Route } from 'svelte-routing';
-
-export let version;
+import TextEditor from './components/TextEditor.svelte';
 
 </script>
 
 <div class="page-root">
-	<div class="page-header">
-		<a use:link href="/Home">	
-			SVELTE APP (v {version})
-		</a>
-	</div>
 	<div class="page-content">
 		<div class="page-content-center">
-			<Router>
-				<Route path="/">Default Page</Route>
-				<Route path="/Home">Home Page</Route>
-				<Route path="/**">Page Not Found</Route>
-			</Router>
+			<TextEditor />
 		</div>
 	</div>
 </div>
@@ -43,25 +32,6 @@ export let version;
 	bottom: 0;
 }
 
-.page-header {
-	width: 100%;
-	display: block;
-	color: #ffffff;
-	background-color: #00bd9c;
-	font-size: 32px;
-	font-weight: bolder;
-	text-align: center;
-}
-
-a {
-	width: 100%;
-	height: 100%;
-	display: block;
-	padding: 40px;
-	color: #ffffff;
-	text-decoration: none;
-}
-
 .page-content {
 	width: 100%;
 	display: block;
@@ -77,7 +47,7 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	color: #515151;
 }
 
